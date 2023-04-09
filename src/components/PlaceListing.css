@@ -1,0 +1,43 @@
+.Place-Listing {
+    padding: 7% 0;
+    background-color: #32323B;
+    color: white;
+    border-radius: 10px;
+    max-width: 500px;
+    top: 0px;
+    position: relative;
+    margin-bottom: 2%;
+    cursor: pointer;
+    animation: fadeIn linear 300ms;
+}
+
+.Place-Listing-Content {
+    padding-left: 70px;
+    padding-right: 60px;
+}
+
+.Place-Listing-Name {
+    color: white;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.Place-List-Info {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #878787;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
