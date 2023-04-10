@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { doc, addDoc, collection, deleteDoc, getDocs } from "firebase/firestore";
+import {
+    doc,
+    addDoc,
+    collection,
+    deleteDoc,
+    getDocs,
+} from "firebase/firestore";
 import PlaceListing from "./PlaceListing";
 import SignOutButton from "./sign-out/SignOut";
 import { db } from "../firebase_setup/setupFirebase";
 
-import "./Home.css"
+import "./Home.css";
 
 function Home() {
     async function addEntryToDb() {
@@ -20,10 +26,10 @@ function Home() {
     }
 
     async function getEntriesFromDb() {
-        const docRef = await getDocs(collection(db, 'places'));
+        const docRef = await getDocs(collection(db, "places"));
         let tempData = [];
         docRef.forEach((doc) => {
-            tempData.push({"id": doc.id, ...doc.data()});
+            tempData.push({ id: doc.id, ...doc.data() });
         });
         console.table(tempData);
         setPlaces(tempData);
@@ -40,27 +46,29 @@ function Home() {
     };
 
     const deletePlaceListing = async (id) => {
-        await deleteDoc(doc(db, 'places', id));
+        await deleteDoc(doc(db, "places", id));
         const newPlaces = places.filter((place) => {
             return place.id !== id;
-        })
+        });
         setPlaces(newPlaces);
-    }
+    };
 
     return (
         <div className="Home">
-            <header className="Home-Header">
+            <div className="Home-Header">
                 <h1>FavPlaces.it</h1>
                 <SignOutButton />
-            </header>
-            <h1>Home Page</h1>
-            <button onClick={AddToDb}>Add</button>
-            <div className="Home-Places-Container">
-            {places.map((place, index) => (
+            </div>
+            <div className="Home-Content">
+                <h1>Home Page</h1>
+                <button onClick={AddToDb}>Add</button>
+                <div className="Home-Places-Container">
+                    {places.map((place, index) => (
                         <div onClick={() => deletePlaceListing(place.id)}>
                             <PlaceListing key={index} data={place} />
                         </div>
                     ))}
+                </div>
             </div>
         </div>
     );

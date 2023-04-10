@@ -1,7 +1,11 @@
 .Home {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+}
+
+.Home-Content {
+    margin-top: 10vh;
 }
 
 .Home h1 {
@@ -30,7 +34,6 @@
     color: white;
     position: fixed;
     top: 0;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
