@@ -1,9 +1,5 @@
 .App {
-  display: flex;
-  flex-direction: row;
   height: 100vh;
-  display: flex;
-  align-items: center;
   background-image: linear-gradient(to right bottom, #32323b, #403e64, #53498d, #6d50b5, #8f54dc);
   font-family: 'Raleway';
 }

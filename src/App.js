@@ -4,7 +4,7 @@ import { auth } from "../src/firebase_setup/setupFirebase";
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 import Home from './components/Home';
-import SignIn from './components/SignIn';
+import SignInPage from './components/sign-in/SignInPage';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         @import
         url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&family=Raleway:wght@675&display=swap');
       </style>
-      {user ? <Home /> : <SignIn />}
+      {user ? <Home /> : <SignInPage />}
 
     </div>
   );

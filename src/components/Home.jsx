@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../firebase_setup/setupFirebase";
-import PlaceListing from "./PlaceListing";
 import { doc, addDoc, collection, deleteDoc, getDocs } from "firebase/firestore";
-import SignOut from "./SignOut";
+import PlaceListing from "./PlaceListing";
+import SignOutButton from "./sign-out/SignOut";
+import { db } from "../firebase_setup/setupFirebase";
+
 import "./Home.css"
 
 function Home() {
@@ -50,7 +51,7 @@ function Home() {
         <div className="Home">
             <header className="Home-Header">
                 <h1>FavPlaces.it</h1>
-                <SignOut />
+                <SignOutButton />
             </header>
             <h1>Home Page</h1>
             <button onClick={AddToDb}>Add</button>

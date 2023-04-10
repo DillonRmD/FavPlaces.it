@@ -1,4 +1,8 @@
-.Home {}
+.Home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 .Home h1 {
     color: white;

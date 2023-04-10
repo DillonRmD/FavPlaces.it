@@ -1,7 +1,7 @@
-import { auth } from "../firebase_setup/setupFirebase";
+import { auth } from "../../firebase_setup/setupFirebase";
 import "./SignOut.css";
 
-function SignOut() {
+function SignOutButton() {
     return (
         auth.currentUser && (
             <button className="Button-Sign-Out" onClick={() => auth.signOut()}>
@@ -11,4 +11,4 @@ function SignOut() {
     );
 }
 
-export default SignOut;
+export default SignOutButton;

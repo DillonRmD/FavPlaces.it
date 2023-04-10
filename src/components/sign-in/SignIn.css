@@ -1,3 +1,11 @@
+.SignIn {
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .Button-Sign-In {
     background-color: #ff7600;
     border: none;
@@ -13,5 +21,4 @@
 
 .SignIn h1 {
     color: white;
-    font-size: xx-large;
 }

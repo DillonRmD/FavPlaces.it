@@ -1,5 +1,3 @@
-import { deleteDoc } from "firebase/firestore";
-import { db } from "../firebase_setup/setupFirebase";
 import "./PlaceListing.css"
 
 function PlaceListing(props) {
