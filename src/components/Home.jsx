@@ -57,11 +57,11 @@ function Home() {
         <div className="Home">
             <div className="Home-Header">
                 <h1>FavPlaces.it</h1>
+                <button onClick={AddToDb}>Add</button>
                 <SignOutButton />
             </div>
             <div className="Home-Content">
-                <h1>Home Page</h1>
-                <button onClick={AddToDb}>Add</button>
+                
                 <div className="Home-Places-Container">
                     {places.map((place, index) => (
                         <div onClick={() => deletePlaceListing(place.id)}>
