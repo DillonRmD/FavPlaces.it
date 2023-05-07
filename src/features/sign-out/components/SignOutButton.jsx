@@ -1,5 +1,4 @@
-import { auth } from "../../firebase_setup/setupFirebase";
-import "./SignOut.css";
+import { auth } from "../../../db/setupFirebase";
 
 function SignOutButton() {
     return (

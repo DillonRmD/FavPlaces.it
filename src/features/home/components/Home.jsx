@@ -6,13 +6,11 @@ import {
     deleteDoc,
     getDocs,
 } from "firebase/firestore";
-import PlaceListing from "./PlaceListing";
-import SignOutButton from "./sign-out/SignOut";
-import { db } from "../firebase_setup/setupFirebase";
+import PlaceListing from "../../../common/listing/components/PlaceListing";
+import SignOutButton from "../../sign-out/components/SignOutButton";
+import { db } from "../../../db/setupFirebase";
 
-import "./Home.css";
-
-function Home() {
+const Home = () => {
     async function addEntryToDb() {
         let entry = {
             name: `Test Place 2`,

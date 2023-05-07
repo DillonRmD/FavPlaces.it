@@ -1,6 +1,5 @@
-import { auth } from "../../firebase_setup/setupFirebase";
+import { auth } from "../../../db/setupFirebase";
 import { GoogleAuthProvider, signInWithPopup} from "firebase/auth";
-import './SignIn.css';
 
 function SignInButton() {
     const signInWithGoogle = () => {

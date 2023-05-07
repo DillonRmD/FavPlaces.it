@@ -1,24 +1,19 @@
 import './App.css';
 
-import { auth } from "../src/firebase_setup/setupFirebase";
+import { auth } from "../src/db/setupFirebase";
 import { useAuthState } from 'react-firebase-hooks/auth';
 
-import Home from './components/Home';
-import SignInPage from './components/sign-in/SignInPage';
+import Home from './features/home/components/Home';
+import SignInPage from './features/sign-in/components/SignInPage';
 
 
 function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="App">
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&family=Raleway:wght@675&display=swap');
-      </style>
+    <>
       {user ? <Home /> : <SignInPage />}
-
-    </div>
+    </>
   );
 }
 
