@@ -1,3 +1,5 @@
+import { Button } from "@mui/material";
+import LoginIcon from '@mui/icons-material/Login';
 import { auth } from "../../../db/setupFirebase";
 import { GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 
@@ -8,9 +10,11 @@ function SignInButton() {
     };
 
     return (
-        <div>
-            <button className="Button-Sign-In" onClick={signInWithGoogle}>Sign-In with Google</button>
-        </div>
+        <>
+        <Button variant="contained" endIcon={<LoginIcon/>} onClick={() => signInWithGoogle()}>
+                Sign In
+        </Button>
+        </>
     );
 }
 
